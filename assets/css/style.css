@@ -1,0 +1,19 @@
+body {
+    background: url('../images/musicbk.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.jumbotron {
+    text-align: center;
+    width: 75%;
+    height: 60%;
+    margin-left: 8%;
+}
+.form-check  {
+    display: none;
+}
+div span {
+    display: none;
+}
