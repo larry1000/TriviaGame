@@ -17,3 +17,12 @@ body {
 div span {
     display: none;
 }
+h4 {
+    display: none;
+}
+#gameOver {
+    display: none;
+}
+/* #rightAnswers {
+    display: none;
+} */
