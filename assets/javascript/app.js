@@ -57,7 +57,7 @@ for(var i = 0; i < questions.length ; i++){
 
 console.log(questions[0].options[0]);
 $("#start").click(function() {
-    var counter = 5;
+    var counter = 30;
     setInterval(function () {
         counter--;
         if (counter >= 0) {
