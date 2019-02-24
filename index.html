@@ -1,156 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Trivia Game</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-        </head>
-        
-        <body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Trivia Game</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  </head>
 
-            <div class="jumbotron">
-                <h1 class="display-4">Music Trivia</h1>
-                <span id="lead">counter:</span>
-                <h1 id="gameOver">GAME OVER!!</h1>
-                <h4>Right Answers:</h4>
-                <h4 id="rightAnswers"></h4>
-                <h4>Wrong Answers:</h4>
-                <h4 id="wrongAnswers"></h4>
-                <h4>Didn't Answer:</h4>
-                <h4 id="noAnswers"></h4>
-                <hr class="my-4">
-                <a class="btn btn-primary btn-lg" href="#" id="start" role="button">Start</a>
-       
+  <body>
+    <div class="jumbotron">
+      <h1 class="display-4">Music Trivia</h1>
+      <span id="lead">counter:</span>
+      <h1 id="gameOver">GAME OVER!!</h1>
+      <h4>Right:</h4>
+      <h4 id="rightAnswers"></h4>
+      <h4>Wrong:</h4>
+      <h4 id="wrongAnswers"></h4>
+      <h4>Didn't Answer:</h4>
+      <h4 id="noAnswers"></h4>
+      <hr class="my-4" />
+      <a class="btn btn-primary btn-lg" href="#" id="start" role="button"
+        >Start</a
+      >
 
-             <div class="form-check">
-                <p>1. What is the name of the Foo Fighters first album?</p>
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Nevermind">
-                <label class="form-check-label" for="exampleRadios1">
-                    Nevermind
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="Foo Fighters">
-                <label class="form-check-label" for="exampleRadios2">
-                    Foo Fighters
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="Hero">
-                <label class="form-check-label" for="exampleRadios3">
-                    The Colour and the Shape
-                </label>
-                </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="The Colour and the Shape">
-                <label class="form-check-label" for="exampleRadios4">
-                    Hero
-                </label>
-                </div>
-            <div class="form-check">
-                <p>2. How old were Janis Joplin, Jimi Hendrix, Jim Morrison, and Kurt Cobain when they died?</p>
-                <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios5" value="27">
-                <label class="form-check-label" for="exampleRadios5">
-                    27
-                </label>
-                </div>
-                <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios6" value="30">
-                <label class="form-check-label" for="exampleRadios6">
-                    30
-                </label>
-                </div>
-                <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios7" value="25">
-                <label class="form-check-label" for="exampleRadios7">
-                    25
-                </label>
-                </div>
-                <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios8" value="29">
-                <label class="form-check-label" for="exampleRadios8">
-                    34
-                </label>
-                </div>
-                <div class="form-check">
-                    <p>3. What was The Notorius BIGs real name?</p>
-                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios1" value="Reggie Noble">
-                    <label class="form-check-label" for="exampleRadios1">
-                        Reggie Noble
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios2" value="Shawn Carter">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Shawn Carter
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios3" value="Christopher Wallace">
-                    <label class="form-check-label" for="exampleRadios3">
-                        Christopher Wallace
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios4" value="Andre Benjamin">
-                    <label class="form-check-label" for="exampleRadios4">
-                        Andre Benjamin
-                    </label>
-                </div>
-                <div class="form-check">
-                    <p>4. What year did Stevie Wonder debut his first album?</p>
-                    <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios1" value="1962">
-                    <label class="form-check-label" for="exampleRadios1">
-                        1962
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios2" value="1960">
-                    <label class="form-check-label" for="exampleRadios2">
-                        1960
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios3" value="1958">
-                    <label class="form-check-label" for="exampleRadios3">
-                        1958
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios4" value="1968">
-                    <label class="form-check-label" for="exampleRadios4">
-                        1968
-                    </label>
-                </div>
-                <div class="form-check">
-                    <p>5. Where are the members of the band Rise Against from?</p>
-                    <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios1" value="Los Angeles">
-                    <label class="form-check-label" for="exampleRadios1">
-                        Los Angeles
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios2" value="Denver">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Denver
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios3" value="Dallas">
-                    <label class="form-check-label" for="exampleRadios3">
-                        Dallas
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios4" value="Chicago">
-                    <label class="form-check-label" for="exampleRadios4">
-                        Chicago
-                    </label>
-                </div>
-            </div>
+      <div class="form-check">
+        <p>1. What is the name of the Foo Fighters first album?</p>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios"
+          id="exampleRadios1"
+          value="Nevermind"
+        />
+        <label class="form-check-label" for="exampleRadios1">
+          Nevermind
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios"
+          id="exampleRadios2"
+          value="Foo Fighters"
+        />
+        <label class="form-check-label" for="exampleRadios2">
+          Foo Fighters
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios"
+          id="exampleRadios3"
+          value="Hero"
+        />
+        <label class="form-check-label" for="exampleRadios3">
+          The Colour and the Shape
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios"
+          id="exampleRadios4"
+          value="The Colour and the Shape"
+        />
+        <label class="form-check-label" for="exampleRadios4">
+          Hero
+        </label>
+      </div>
+      <div class="form-check">
+        <p>
+          2. How old were Janis Joplin, Jimi Hendrix, Jim Morrison, and Kurt
+          Cobain when they died?
+        </p>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios2"
+          id="exampleRadios5"
+          value="27"
+        />
+        <label class="form-check-label" for="exampleRadios5">
+          27
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios2"
+          id="exampleRadios6"
+          value="30"
+        />
+        <label class="form-check-label" for="exampleRadios6">
+          30
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios2"
+          id="exampleRadios7"
+          value="25"
+        />
+        <label class="form-check-label" for="exampleRadios7">
+          25
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios2"
+          id="exampleRadios8"
+          value="29"
+        />
+        <label class="form-check-label" for="exampleRadios8">
+          34
+        </label>
+      </div>
+      <div class="form-check">
+        <p>3. What was The Notorius BIGs real name?</p>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios3"
+          id="exampleRadios1"
+          value="Reggie Noble"
+        />
+        <label class="form-check-label" for="exampleRadios1">
+          Reggie Noble
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios3"
+          id="exampleRadios2"
+          value="Shawn Carter"
+        />
+        <label class="form-check-label" for="exampleRadios2">
+          Shawn Carter
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios3"
+          id="exampleRadios3"
+          value="Christopher Wallace"
+        />
+        <label class="form-check-label" for="exampleRadios3">
+          Christopher Wallace
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios3"
+          id="exampleRadios4"
+          value="Andre Benjamin"
+        />
+        <label class="form-check-label" for="exampleRadios4">
+          Andre Benjamin
+        </label>
+      </div>
+      <div class="form-check">
+        <p>4. What year did Stevie Wonder debut his first album?</p>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios4"
+          id="exampleRadios1"
+          value="1962"
+        />
+        <label class="form-check-label" for="exampleRadios1">
+          1962
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios4"
+          id="exampleRadios2"
+          value="1960"
+        />
+        <label class="form-check-label" for="exampleRadios2">
+          1960
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios4"
+          id="exampleRadios3"
+          value="1958"
+        />
+        <label class="form-check-label" for="exampleRadios3">
+          1958
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios4"
+          id="exampleRadios4"
+          value="1968"
+        />
+        <label class="form-check-label" for="exampleRadios4">
+          1968
+        </label>
+      </div>
+      <div class="form-check">
+        <p>5. Where are the members of the band Rise Against from?</p>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios5"
+          id="exampleRadios1"
+          value="Los Angeles"
+        />
+        <label class="form-check-label" for="exampleRadios1">
+          Los Angeles
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios5"
+          id="exampleRadios2"
+          value="Denver"
+        />
+        <label class="form-check-label" for="exampleRadios2">
+          Denver
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios5"
+          id="exampleRadios3"
+          value="Dallas"
+        />
+        <label class="form-check-label" for="exampleRadios3">
+          Dallas
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios5"
+          id="exampleRadios4"
+          value="Chicago"
+        />
+        <label class="form-check-label" for="exampleRadios4">
+          Chicago
+        </label>
+      </div>
+    </div>
 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script type="text/javascript" src="assets/javascript/app.js"></script>
-    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+  </body>
 </html>
